@@ -92,7 +92,7 @@ keymap("x", "p", '"_dP')
 if keys.s_windows ~= nil and keys.s_windows.enable then
   local skey = keys.s_windows
   -- 取消 s 默认功能
-  keymap("n", "s", "")
+  -- keymap("n", "s", "")
   keymap("n", skey.split_vertically, ":vsp<CR>")
   keymap("n", skey.split_horizontally, ":sp<CR>")
   -- 关闭当前

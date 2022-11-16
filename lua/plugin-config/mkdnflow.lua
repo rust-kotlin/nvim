@@ -21,6 +21,7 @@ if type(mkd) == "table" and mkd.enable then
   local mkdnflowGroup = vim.api.nvim_create_augroup("mkdnflowGroup", {
     clear = true,
   })
+
   vim.api.nvim_create_autocmd("FileType", {
     group = mkdnflowGroup,
     pattern = { "markdown", "md", "mdx" },

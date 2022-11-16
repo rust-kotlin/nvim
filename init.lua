@@ -16,6 +16,9 @@ require("plugin-config.dashboard")
 require("plugin-config.project")
 require("plugin-config.nvim-treesitter")
 require("plugin-config.toggleterm")
+require("plugin-config.nvim-surround")
+require("plugin-config.autolist")
+-- require("plugin-config.mkdnflow")
 -- 主题设置
 require("colorscheme")
 -- 自动命令

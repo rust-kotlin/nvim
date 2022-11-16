@@ -39,6 +39,20 @@ packer.startup({
     -- use("lewis6991/impatient.nvim")
     -- use("nathom/filetype.nvim")
 
+    -- sniprun
+    -- use({
+    --   "michaelb/sniprun",
+    --   run = "bash ./install.sh",
+    --   config = function()
+    --     require("sniprun").setup({
+    --       display = {
+    --         "Terminal",
+    --       },
+    --     })
+    --   end,
+    -- })
+    -- autolist
+    use("gaoDean/autolist.nvim")
     -- nvim-notify
     use({
       "rcarriga/nvim-notify",
@@ -190,6 +204,7 @@ packer.startup({
     -- mkdnflow.nvim
     use({
       "jakewvincent/mkdnflow.nvim",
+      -- rocks = "luautf8",
       ft = { "markdown" },
       commit = "739b8b93530adbd5dfb2d3abff66752637442d41",
       config = function()

@@ -104,9 +104,15 @@ M.toggleG = function()
   lazygit:toggle()
 end
 
-vim.keymap.set({ "n", "t" }, uToggleTerm.toggle_window_A, M.toggleA)
-vim.keymap.set({ "n", "t" }, uToggleTerm.toggle_window_B, M.toggleB)
-vim.keymap.set({ "n", "t" }, uToggleTerm.toggle_window_C, M.toggleC)
+vim.keymap.set({
+  "n",--[[ , "t"  ]]
+}, uToggleTerm.toggle_window_A, M.toggleA)
+vim.keymap.set({
+  "n",--[[ , "t"  ]]
+}, uToggleTerm.toggle_window_B, M.toggleB)
+vim.keymap.set({
+  "n",--[[ , "t"  ]]
+}, uToggleTerm.toggle_window_C, M.toggleC)
 
 --[[ 
 vim.keymap.set({ "n", "t" }, "<leader>tj", function()
