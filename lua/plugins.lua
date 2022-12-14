@@ -39,18 +39,13 @@ packer.startup({
     -- use("lewis6991/impatient.nvim")
     -- use("nathom/filetype.nvim")
 
-    -- sniprun
-    -- use({
-    --   "michaelb/sniprun",
-    --   run = "bash ./install.sh",
-    --   config = function()
-    --     require("sniprun").setup({
-    --       display = {
-    --         "Terminal",
-    --       },
-    --     })
-    --   end,
-    -- })
+    -- code-runner
+    use({
+      "is0n/jaq-nvim",
+      config = function()
+        require("plugin-config.code-runner")
+      end,
+    })
     -- autolist
     use("gaoDean/autolist.nvim")
     -- nvim-notify

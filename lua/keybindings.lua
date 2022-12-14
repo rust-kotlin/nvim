@@ -40,13 +40,23 @@ keymap("c", keys.c_prev_item, "<C-p>", opts_remap)
 keymap("n", keys.n_save, ":w<CR>")
 keymap("n", keys.n_save_quit, ":wq<CR>")
 keymap("n", keys.n_save_all, ":wa<CR>")
-keymap("n", keys.n_save_all_quit, ":wqa<CR>")
-keymap("n", "<leader>q", ":q!<CR>")
+-- keymap("n", keys.n_save_all_quit, ":wqa<CR>")
+keymap("n", "<leader>q", ":q<CR>")
+keymap("n", "<leader>qq", ":q!<CR>")
 keymap("n", keys.n_force_quit, ":qa!<CR>")
 
 -- $跳到行尾不带空格 (交换$ 和 g_)
 keymap({ "v", "n" }, "$", "g_")
 keymap({ "v", "n" }, "g_", "$")
+
+-- insert_mode下跳到行尾行首
+keymap("i", "<C-l>", "<Esc>g_a")
+keymap("i", "<C-h>", "<Esc>^i")
+keymap("i", "<C-j>", "<Esc>o")
+keymap("i", "<C-k>", "<Esc>O")
+
+-- code-runner
+keymap("n", "<F5>", ":Jaq<CR>")
 
 -- 上下滚动浏览
 keymap({ "n", "v" }, keys.n_v_5j, "5j")
@@ -123,13 +133,21 @@ if keys.s_tab ~= nil then
 end
 
 -- treesitter 折叠
-keymap("n", keys.fold.open, ":foldopen<CR>")
-keymap("n", keys.fold.close, ":foldclose<CR>")
+-- keymap("n", keys.fold.open, ":foldopen<CR>")
+-- keymap("n", keys.fold.close, ":foldclose<CR>")
 
+-- Dashboard 主页
+keymap("n", "<leader>d", ":Dashboard<CR>")
+
+-- Telescope projects
+keymap("n", "<leader>p", ":Telescope projects<CR>")
+
+-- Format
 keymap("n", keys.format, "<cmd>lua vim.lsp.buf.formatting()<CR>")
 
 -- Esc 回 Normal 模式
 keymap("t", keys.terminal_to_normal, "<C-\\><C-n>")
+
 -- Terminal相关
 map("n", "st", ":sp | terminal<CR>", opt)
 map("n", "stv", ":vsp | terminal<CR>", opt)

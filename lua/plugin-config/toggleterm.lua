@@ -25,7 +25,7 @@ toggleterm.setup({
 local Terminal = require("toggleterm.terminal").Terminal
 
 local lazygit = Terminal:new({
-  cmd = "lazygit",
+  cmd = "powershell",
   dir = "git_dir",
   direction = "float",
   float_opts = {
@@ -35,7 +35,7 @@ local lazygit = Terminal:new({
     vim.cmd("startinsert!")
     -- q / <leader>tg 关闭 terminal
     vim.api.nvim_buf_set_keymap(term.bufnr, "n", "q", "<cmd>close<CR>", { noremap = true, silent = true })
-    vim.api.nvim_buf_set_keymap(term.bufnr, "n", "<leader>tg", "<cmd>close<CR>", { noremap = true, silent = true })
+    -- vim.api.nvim_buf_set_keymap(term.bufnr, "n", "<leader>tg", "<cmd>close<CR>", { noremap = true, silent = true })
     -- ESC 键取消，留给lazygit
     if vim.fn.mapcheck("<Esc>", "t") ~= "" then
       vim.api.nvim_del_keymap("t", "<Esc>")
@@ -114,9 +114,9 @@ vim.keymap.set({
   "n",--[[ , "t"  ]]
 }, uToggleTerm.toggle_window_C, M.toggleC)
 
---[[ 
-vim.keymap.set({ "n", "t" }, "<leader>tj", function()
-  M.toggleA("pnpm test")
-end)
-vim.keymap.set({ "n", "t" }, "<leader>tg", M.toggleG)
-]]
+-- vim.keymap.set({ "n", "t" }, "<leader>tj", function()
+--   M.toggleA("pnpm test")
+-- end)
+vim.keymap.set({
+  "n",--[[ , "t"  ]]
+}, "<leader>tg", M.toggleG)

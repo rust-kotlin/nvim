@@ -38,26 +38,50 @@ ls.config.set_config({
   },
 })
 
-vim.keymap.set({ "i", "s" }, config.keys.snip_jump_next, function()
-  if ls.expand_or_jumpable() then
-    ls.expand_or_jump()
+vim.keymap.set(
+  {--[[  "i", ]]
+    "s",
+  },
+  config.keys.snip_jump_next,
+  function()
+    if ls.expand_or_jumpable() then
+      ls.expand_or_jump()
+    end
   end
-end)
+)
 
-vim.keymap.set({ "i", "s" }, config.keys.snip_jump_prev, function()
-  if ls.jumpable(-1) then
-    ls.jump(-1)
+vim.keymap.set(
+  {--[[  "i",  ]]
+    "s",
+  },
+  config.keys.snip_jump_prev,
+  function()
+    if ls.jumpable(-1) then
+      ls.jump(-1)
+    end
   end
-end)
+)
 
-vim.keymap.set({ "i", "s" }, config.keys.snip_next_choice, function()
-  if ls.choice_active() then
-    ls.change_choice(1)
+vim.keymap.set(
+  {--[[  "i",  ]]
+    "s",
+  },
+  config.keys.snip_next_choice,
+  function()
+    if ls.choice_active() then
+      ls.change_choice(1)
+    end
   end
-end)
+)
 
-vim.keymap.set({ "i", "s" }, config.keys.snip_prev_choice, function()
-  if ls.choice_active() then
-    ls.change_choice(-1)
+vim.keymap.set(
+  {--[[  "i",  ]]
+    "s",
+  },
+  config.keys.snip_prev_choice,
+  function()
+    if ls.choice_active() then
+      ls.change_choice(-1)
+    end
   end
-end)
+)

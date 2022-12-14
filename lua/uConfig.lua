@@ -14,7 +14,7 @@ local M = {
     n_save_quit = "<leader>wq", --:wq
     n_save_all = "<leader>wa", -- :wa
     -- n_save_all_quit = "<leader>qa", -- :wqa
-    n_force_quit = "<leader>qq", -- :qa!
+    n_force_quit = "<leader>qa", -- :qa!
 
     n_v_5j = "<C-j>",
     n_v_5k = "<C-k>",
@@ -76,10 +76,10 @@ local M = {
       close = "tc",
     },
 
-    fold = {
-      open = "Z",
-      close = "zz",
-    },
+    -- fold = {
+    --   open = "Z",
+    --   close = "zz",
+    -- },
 
     format = "<leader>f",
 
@@ -90,7 +90,7 @@ local M = {
     -- im-select
   },
 
-  enable_magic_search = true,
+  enable_magic_search = false,
 
   nvimTree = {
 

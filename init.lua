@@ -18,6 +18,8 @@ require("plugin-config.nvim-treesitter")
 require("plugin-config.toggleterm")
 require("plugin-config.nvim-surround")
 require("plugin-config.autolist")
+require("plugin-config.gitsigns")
+require("plugin-config.code-runner")
 -- require("plugin-config.mkdnflow")
 -- 主题设置
 require("colorscheme")

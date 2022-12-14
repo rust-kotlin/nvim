@@ -21,4 +21,4 @@
 - <C-h>/<C-l> : move between buffers
 - <A-h/j/k/l> : move between windows
 - <leader>w/q/qq/wa : write or quit the windows
-- <C-w> : quite the buffer
+- <C-w> : quit the buffer
